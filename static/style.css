@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a2a3a, #223b55);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Патерн на фоні */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: repeating-linear-gradient(60deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 2px, transparent 2px, transparent 40px),
+                      repeating-linear-gradient(-60deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 2px, transparent 2px, transparent 40px);
+    z-index: 0;
+}
+
+/* Картка */
+.card {
+    background: radial-gradient(circle, #8f0404, #000000);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3), 0 0 20px rgba(255,0,0,0.3);
+    animation: fadeIn 0.6s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.4), 0 0 25px rgba(255,0,0,0.5);
+}
+
+/* Аватар з градієнтним фоном */
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-gradient {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    background: radial-gradient(circle, #000000, #000000);
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(15px);
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    margin: 15px 0 5px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.fancy-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: linear-gradient(90deg, #7f00ff, #00d4ff);
+    background: linear-gradient(90deg, #ff0000, #b70092);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #ccc;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Стиль кнопок */
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.links img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Кольори кнопок */
+.youtube { background: #FF0000; }
+.youtube:hover { background: #cc0000; }
+
+.twitch { background: #9146FF; }
+.twitch:hover { background: #772ce8; }
+
+.tiktok { background: #423f3f; }
+.tiktok:hover { background: #222222; }
+
+.telegram { background: #0088cc; }
+.telegram:hover { background: #006699; }
+
+.steam { background: #02184b; }
+.steam:hover { background: #0f1117; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

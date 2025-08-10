@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zesty01</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="card">
+    <div class="avatar-wrapper">
+        <div class="avatar-gradient"></div>
+        <img src="{{ url_for('static', filename='avatar.jpg') }}" alt="Avatar" class="avatar">
+    </div>
+<h1 class="fancy-title">Zesty01</h1>
+<p class="subtitle">Привіт!<br>Так, це я - рандом з України!</p>
+
+
+    <div class="links">
+        <a href="https://www.youtube.com/@0zesty11/featured" target="_blank" class="youtube">
+            <img src="{{ url_for('static', filename='icons/youtube.svg') }}" alt=""> YouTube
+        </a>
+        <a href="https://www.twitch.tv/0zesty11" target="_blank" class="twitch">
+            <img src="{{ url_for('static', filename='icons/twitch.svg') }}" alt=""> Twitch
+        </a>
+        <a href="https://www.tiktok.com/@71_ananas?is_from_webapp=1&sender_device=pc" target="_blank" class="tiktok">
+            <img src="{{ url_for('static', filename='icons/tiktok.svg') }}" alt=""> TikTok
+        </a>
+        <a href="https://t.me/zesty011" target="_blank" class="telegram">
+            <img src="{{ url_for('static', filename='icons/telegram.svg') }}" alt=""> Telegram
+        </a>
+        <a href="https://steamcommunity.com/profiles/76561199820225813/" target="_blank" class="steam">
+            <img src="{{ url_for('static', filename='icons/steam.svg') }}" alt=""> Steam
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
