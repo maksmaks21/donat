@@ -81,7 +81,7 @@ h1 {
     font-weight: bold;
     color: linear-gradient(90deg, #7f00ff, #00d4ff);
     background: linear-gradient(90deg, #ff0000, #ff00cc);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     letter-spacing: 2px;
